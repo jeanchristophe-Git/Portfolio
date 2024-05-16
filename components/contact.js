@@ -1,19 +1,22 @@
 import React from "react";
-
+import Link from "next/link";
 export default function ConctactSection() {
+   
+
+
   return (
-    <div className=" mb-32" >
-      <h1 className="text-3xl font-mono mt-24  ">Contact me</h1>
+    <div className=" mb-28" >
+      <h1 className="text-3xl font-mono mt-20  ">Contact me</h1>
       <p className="text-gray-500 font-sans ">
         Find me on my social networks or send me an email.
       </p>
-
       <div className="flex space-x-4 items-center mt-8">
 
 
         <section class="flex justify-center items-center">
-          <button
-            href="/"
+         <Link href="https://www.linkedin.com/in/jean-christophe-d%C3%A9sire-bogb%C3%A9-141226307/" >
+         <button
+            href="https://www.linkedin.com/feed/"
             class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] from-gray-800 text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
           >
             <svg
@@ -32,10 +35,12 @@ export default function ConctactSection() {
               Linkedin
             </span>
           </button>
+         </Link>
         </section>
 
 
         <section class="flex justify-center items-center">
+          <Link href="https://github.com/jeanchristophe-Git" >  
           <button
             class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
             href="/"
@@ -57,14 +62,16 @@ export default function ConctactSection() {
               GitHub
             </span>
           </button>
+          </Link>
         </section>
 
 
 
         <section class="flex justify-center items-center">
-          <button
+        <Link href="mailto:hello.jeanchristophebogbe@gmail.com" >  
+        <button
             class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
-            href="/"
+            
           >
             <svg
               width="1em"
@@ -110,6 +117,7 @@ export default function ConctactSection() {
               Gmail
             </span>
           </button>
+        </Link>
         </section>
       </div>
     </div>
