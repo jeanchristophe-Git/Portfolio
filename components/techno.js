@@ -37,7 +37,7 @@ export default function TechnoSection() {
   return (
     <div className=" mt-28 ">
       <h1 className="text-3xl font-semibold ">Comment puis-je vous aider ?</h1>
-      <p className="text-gray-500 font-medium">
+      <p className="text-gray-500 font-medium mt-2 ">
       Je conçois des expériences sur mesure pour vous, vos clients et vos projets les plus ambitieux, en partant de zéro.
       </p>
       <div className="mt-8 flex gap-3 ">

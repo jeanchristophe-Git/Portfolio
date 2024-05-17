@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body{
-  @apply  container mx-auto max-w-2xl bg-white 
+  @apply  container mx-auto max-w-2xl bg-white  dark:bg-slate-950
+  dark:text-slate-100 
 }
    
