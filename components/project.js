@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 // image
 import profile from '../public/placehod.svg';
 
@@ -47,7 +49,7 @@ export default function ProjectSection() {
                         <div className=' ' >
                             <h1 className=' font-semibold ' >{projet.name}</h1>
                             <p className=' text-gray-500 font-medium ' >{projet.description}</p>
-                            <p className=' underline underline-offset-4 font-medium ' >{projet.suite}</p>
+                            <Link href="/" className=' underline hover:underline-offset-4   ease-in-out  font-medium ' >{projet.suite}</Link>
                             <div className='  w-full ' >
                             <Image className='w-full mt-5 rounded-2xl '
                                 src={projet.image}

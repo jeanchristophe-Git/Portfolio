@@ -20,13 +20,13 @@ export default function NavSection() {
           </div>
           <ul className="flex space-x-8">
             <li>
-              <Link href="/" className="text-gray-500 hover:text-slate-900">Home</Link>
+              <Link href="/" className="text-gray-500 hover:text-slate-900  dark:hover:text-gray-50 ">Home</Link>
             </li>
             <li>
-              <Link href="/about" className="text-gray-500 hover:text-slate-900">About</Link>
+              <Link href="/about" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">About</Link>
             </li>
             <li>
-              <Link href="/blog" className="text-gray-500 hover:text-slate-900">Blog</Link>
+              <Link href="/blog" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">Blog</Link>
             </li>
           </ul>
            <DarkModeToggle/>

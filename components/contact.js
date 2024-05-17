@@ -42,7 +42,7 @@ export default function ConctactSection() {
         <section class="flex justify-center items-center">
           <Link href="https://github.com/jeanchristophe-Git" >  
           <button
-            class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+            class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 "
             href="/"
           >
             <svg
@@ -70,7 +70,7 @@ export default function ConctactSection() {
         <section class="flex justify-center items-center">
         <Link href="mailto:hello.jeanchristophebogbe@gmail.com" >  
         <button
-            class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+            class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-t from-red-500 to-green-500  text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 "
             
           >
             <svg
