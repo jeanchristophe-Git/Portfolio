@@ -7,10 +7,10 @@ export default function NavSection() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0  backdrop-blur-sm  z-40">
-        <div className="container mx-auto max-w-2xl flex justify-between items-center p-1">
+        <div className="container mx-auto  max-w-2xl flex justify-between items-center p-3 md:p-1  ">
           <div>
             <Image 
-              className="rounded-full w-10 h-10" 
+              className="rounded-full w-10 h-10  " 
               src={profilPic} 
               alt="Picture of the author" 
               width={40} 

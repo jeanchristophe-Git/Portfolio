@@ -40,12 +40,12 @@ export default function ProjectSection() {
     ];
 
     return (
-        <div className='mt-20'>
-            <h1 className='font-medium mt-4 '>Projets sélectionnés</h1>
+        <div className=' mt-16  md:mt-20'>
+            <h1 className=' ml-5 md:ml-0 font-medium md:mt-4 '>Projets sélectionnés</h1>
             <div>
                 {project.map((projet) => (
-                    <div key={projet.id} className=' flex space-x-20 mt-11'>
-                        <div className=' w-3/12 '  >{projet.years}</div>
+                    <div key={projet.id} className=' p-5  md:flex  md:space-x-20 mt-11  '>
+                        <div className=' flex  w-4/12  '  >{projet.years}</div>
                         <div className=' ' >
                             <h1 className=' font-semibold ' >{projet.name}</h1>
                             <p className=' text-gray-500 font-medium ' >{projet.description}</p>

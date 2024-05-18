@@ -5,7 +5,7 @@ export default function ConctactSection() {
 
 
   return (
-    <div className=" mb-28" >
+    <div className=" ml-5 md:ml-0  mb-28" >
       <h1 className="text-3xl font-mono mt-16  ">Contact me</h1>
       <p className="text-gray-500 font-sans ">
         Find me on my social networks or send me an email.

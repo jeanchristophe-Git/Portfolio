@@ -35,17 +35,17 @@ export default function TechnoSection() {
   };
 
   return (
-    <div className=" mt-28 ">
+    <div className=" mt-28 p-5 md:p-0 ">
       <h1 className="text-3xl font-semibold ">Comment puis-je vous aider ?</h1>
       <p className="text-gray-500 font-medium mt-2 ">
       Je conçois des expériences sur mesure pour vous, vos clients et vos projets les plus ambitieux, en partant de zéro.
       </p>
-      <div className="mt-8 flex gap-3 ">
+      <div className="mt-8 grid  grid-cols-2  md:grid-flow-col   gap-1">
         {tecno.map((tecno) => {
           return (
             <button
               key={tecno.id}
-              className=" inline-flex items-center  gap-2 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-600 hover:text-gray-900 duration-100 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100  focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-100 dark:bg-transparent dark:text-slate-200 dark:hover:bg-gray-500   "
+              className=" flex items-center  gap-2 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-600 hover:text-gray-900 duration-100 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100  focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-100 dark:bg-transparent dark:text-slate-200 dark:hover:bg-gray-500   "
             >
               <span className="text-3xl    ">{tecno.icon}</span>{" "}
               <p className="text-xl font-semibold ">{tecno.name}</p>
