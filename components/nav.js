@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import profilPic from '../public/profile.png';
-import DarkModeToggle from "./dar-mode-toogle";
+import DarkModeToggle from "./dark-mode-toogle";
 
 export default function NavSection() {
   return (

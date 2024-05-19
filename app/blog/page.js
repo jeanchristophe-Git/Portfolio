@@ -19,7 +19,7 @@ export default function BlogPage() {
                         <div className="mt-4">
                             <p className="text-green-400 dark:text-green-600 ">$ npm install BlogPage </p>
                             <p className="text-red-500  dark:text-red-600 ">× ./app/blog/page.js Error: </p>
-                            <p className="text-white dark:text-slate-800 ">Bahh j'ai la flemme mais t'inquiete le blog arrive tres vite 🤣 </p>
+                            <p className="text-white dark:text-slate-800 ">Bahh j'ai la flemme mais t'inquiète le blog arrive tres vite 🤣 </p>
                             <p className="text-green-400 dark:text-green-600 ">$</p>
                         </div>
                     </aside>
