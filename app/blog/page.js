@@ -4,7 +4,7 @@ export default function BlogPage() {
     return (
         <div>
             <NavSection />
-            <div className="flex flex-col items-center mt-32">
+            <div className="flex flex-col items-center mt-32 mx-3">
                 <h1 className="text-center">Blog page</h1>
                 <div className="mt-8">
                     <aside className="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono dark:bg-slate-100 ">

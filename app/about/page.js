@@ -1,259 +1,161 @@
 import NavSection from "@/components/nav";
-
 //icons
 import { ArrowUpRight } from "lucide-react";
-
-
 // image
-
 import logo from '../../public/profile.png'
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/button";
 
-
-
-
 export default function PageAbout() {
+  // Tableau contenant les informations "À propos de moi"
+  const aboutMe = [
+    {
+      id: 1,
+      status: "Moi",
+      name: "Jean-Christophe",
+      location: "Abidjan",
+      school: "ESMA",
+      description: [
+        " Actuellement étudiant en informatique à Ecole de spécialité Multimedia d'Abidjan, j'ai eu l'opportunité de travailler sur de nombreux projets, notamment en front-end, UI/UX.",
+        "Je suis particulièrement curieux et j'apprends très vite. Formé en back-end de manière autodidacte, ce qui me permet de me définir comme un développeur full-stack junior. J'adore commencer des projets de A à Z, en créant les visuels pour les applications avec des outils comme Figma et Photoshop. J'aime transformer des idées en produits finis, en m'assurant que chaque détail est pris en compte pour offrir une expérience utilisateur optimale.",
+        "J'aime travailler sur mes idées et je suis toujours ouvert à de nouvelles opportunités et collaborations pour grandir et apprendre."
+      ]
+    }
+  ];
 
+  // Tableau contenant les expériences de travail
+  const Work = [
+    {
+      id: 1,
+      status: "Work",
+      experience: "Experience 🧑🏾‍💻",
 
+      //xp 1
+      image: logo,
+      work: " Freelance Frontend",
+      ets: "Malt",
+      date: "2023-2023",
 
-    const Work = [
-        {
-            id: 1,
+      //xp2
+      image_2: logo,
+      work_2: "Developpeur Frontend",
+      ets_2: "Prestij Sarl",
+      date_2: "2022-2023"
+    }
+  ];
 
-            //Mention par defaut 
-            status: "Work",
-            experience: "Experience 🧑🏾‍💻",
+  // Tableau contenant les projets
+  const sideProject = [
+    {
+      id: 1,
+      status: "Projets ",
+      experience: "J'aime travailler sur mes idees 🌟",
 
-            //premiere xp
-            image: logo,
-            work: " Freelance Frontend",
-            ets: "Malt",
-            date: "2023-2023",
+      //projet 1
+      title: "E-commerce",
+      description: "Création d'un site e-commerce avec Next.js et Stripe",
+      image: logo,
+      link: "https://github.com/lucidev/e-commerce",
 
-            //seconde xp 
-            image_2: logo,
-            work_2: "Frontend  develloper ",
-            ets_2: "Prestij Sarl",
-            date_2: "2022-2023"
+      //projet 2
+      title_2: "Jean christophe Bogbé",
+      description_2: "Le site web que vous consultez !",
+      image_2: logo,
+      link_2: "https://github.com/lucidev/e-commerce"
+    }
+  ];
 
-        },
-
-
-    ];
-
-
-
-    const sideProject = [
-        {
-            id: 1,
-            status: "projects ",
-            experience: "J'aime travailler sur mes idees 🌟",
-
-
-            // projet 01
-            title: "E-commerce",
-            description: "Création d'un site e-commerce avec Next.js et Stripe",
-            image: logo,
-            link: "https://github.com/lucidev/e-commerce",
-
-            //projet 02 
-            title_2: "Jean christophe Bogbé",
-            description_2: "Le site web que vous consultez !",
-            image_2: logo,
-            link_2: "https://github.com/lucidev/e-commerce",
-        },
-
-    ]
-
-
-
-
-
-    return (
-        <>
-            <NavSection />
-
-            <div className="mt-32" >
-                <h1>about page</h1>
+  return (
+    <>
+      <NavSection />
+      
+      {/* Section "À propos de moi" */}
+      <div className="mt-16 md:mt-20">
+        {aboutMe.map((person) => (
+          <div key={person.id} className='p-5 md:flex md:space-x-20 mt-11'>
+            <div className='flex w-1/12'>{person.status}</div>
+            <div className='mt-2 md:mt-0 w-full'>
+              <div className="flex items-center justify-between">
+                <h1 className='font-semibold'>Qui suis-je ?</h1>
+              </div>
+              <div className="mt-4 leading-7">
+                {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button>.Actuellement étudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link>. Je suis un développeur web passionné basé à Abidjan.
+              </div>
+              {person.description.map((desc, index) => (
+                <p key={index} className="mt-4 leading-7">{desc}</p>
+              ))}
             </div>
-            <div className=' mt-16  md:mt-20'>
+          </div>
+        ))}
+      </div>
 
-                <div>
-                    {Work.map((projet) => (
-                        <div key={projet.id} className=' p-5  md:flex  md:space-x-20 mt-11  '>
-                            <div className=' flex  w-1/12  '  >{projet.status}</div>
-                            <div className='mt-2 md:mt-0 w-full' >
-
-                                <div className="flex items-center justify-between " >
-
-                                    <h1 className=' font-semibold ' >{projet.experience}</h1>
-
-                                    <Link href="https://read.cv/jeanchristophe" target="_blank"  >
-                                        <Button variant="outline" size="xs" >Lire  mon cv</Button>
-                                    </Link>
-
-                                </div>
-
-                                <p className=' text-gray-500 font-medium ' >{projet.description}</p>
-                                <Link target="_blank" href="/" className=' underline hover:underline-offset-4   ease-in-out  font-medium ' >{projet.suite}</Link>
-
-                                <div className='flex items-center justify-between w-full mt-5 '>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={projet.image}
-                                            alt={projet.name}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <p className='font-medium'>{projet.work}</p>  {/* Peut-être ajouter une police différente */}
-                                            <Link href="https://www.malt.fr/" className='text-gray-600         hover:underline gap-1   hover:underline-offset-2 flex   space-x-4 '>{projet.ets} <ArrowUpRight className="w-5" /> </Link>   {/* Couleur de texte plus claire */}
-                                        </div>
-
-                                    </div>
-                                    <div className='text-gray-500'>
-                                        {projet.date}
-                                    </div>
-                                </div>
-
-
-                                <div className='flex items-center justify-between  mt-4'>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={projet.image_2}
-                                            alt={projet.name}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <p className='font-medium'>{projet.work_2}</p>  {/* Peut-être ajouter une police différente */}
-                                            <Link target="_blank" href="https://www.prestijsarl.com/" className='text-gray-600         hover:underline gap-1   hover:underline-offset-2 flex   space-x-4 '>{projet.ets_2} <ArrowUpRight className="w-5" /> </Link>  {/* Couleur de texte plus claire */}
-                                        </div>
-                                    </div>
-                                    <div className='text-gray-500'>
-                                        {projet.date_2}
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    ))}
+      {/* Section "Work" */}
+      <div className='mt-16 md:mt-20'>
+        {Work.map((projet) => (
+          <div key={projet.id} className='p-5 md:flex md:space-x-20 mt-11'>
+            <div className='flex w-1/12'>{projet.status}</div>
+            <div className='mt-2 md:mt-0 w-full'>
+              <div className="flex items-center justify-between">
+                <h1 className='font-semibold'>{projet.experience}</h1>
+                <Link href="https://read.cv/jeanchristophe" target="_blank">
+                  <Button variant="outline" size="xs">Lire mon cv</Button>
+                </Link>
+              </div>
+              <div className='flex items-center justify-between w-full mt-5'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full' src={projet.image} alt={projet.work} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <p className='font-medium'>{projet.work}</p>
+                    <Link href="https://www.malt.fr/" className='text-gray-600 hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{projet.ets} <ArrowUpRight className="w-5" /></Link>
+                  </div>
                 </div>
-            </div>
-
-
-
-
-
-
-            {/* Affichage des mes projets  */}
-
-
-
-            <div className=' mt-16  md:mt-20'>
-
-                <div>
-                    {sideProject.map((Sideprojet) => (
-                        <div key={Sideprojet.id} className=' p-5   md:flex  md:space-x-20 mt-11  '>
-                            <div className=' flex  w-1/12  '  >projects </div>
-                            <div className='mt-2 md:mt-0  ' >
-                                <h1 className=' font-semibold ' >J'aime travailler sur mes idees 🌟</h1>
-
-
-                                {/*  projets 01  */}
-
-                                <div className='flex items-center justify-between mt-4'>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={Sideprojet.image}
-                                            alt={Sideprojet.name}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <Link href={Sideprojet.link_2} className='font-medium   hover:underline gap-1   hover:underline-offset-2 flex  space-x-4 '>{Sideprojet.title} <ArrowUpRight className="w-5" /></Link>  {/* Peut-être ajouter une police différente */}
-                                            <p className='text-gray-600 '>{Sideprojet.description}  </p>  {/* Couleur de texte plus claire */}
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                {/*  projets 02  */}
-
-                                <div className='flex items-center justify-between mt-4'>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={Sideprojet.image_2}
-                                            alt={Sideprojet.name_2}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <Link href={Sideprojet.link_2} className='font-medium   hover:underline gap-1   hover:underline-offset-2 flex  space-x-4 '>{Sideprojet.title_2} <ArrowUpRight className="w-5" /></Link>  {/* Peut-être ajouter une police différente */}
-                                            <p className='text-gray-600 '>{Sideprojet.description_2}  </p>  {/* Couleur de texte plus claire */}
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                {/*  projets 03  */}
-
-
-
-                                <div className='flex items-center justify-between mt-4'>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={Sideprojet.image_2}
-                                            alt={Sideprojet.name_2}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <Link href={Sideprojet.link_2} className='font-medium   hover:underline gap-1   hover:underline-offset-2 flex  space-x-4 '>{Sideprojet.title_2} <ArrowUpRight className="w-5" /></Link>  {/* Peut-être ajouter une police différente */}
-                                            <p className='text-gray-600 '>{Sideprojet.description_2}  </p>  {/* Couleur de texte plus claire */}
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                                {/*  projets 04  */}
-
-
-                                <div className='flex items-center justify-between mt-4'>
-                                    <div className='flex items-center'>
-                                        <Image
-                                            className='w-16 h-16 rounded-full'
-                                            src={Sideprojet.image_2}
-                                            alt={Sideprojet.name_2}
-                                            width={64}  // Taille plus appropriée pour un avatar
-                                            height={64} // Taille plus appropriée pour un avatar
-                                        />
-                                        <div className='flex flex-col ml-4'>  {/* Ajout d'une marge à gauche pour espacer */}
-                                            <Link href={Sideprojet.link_2} className='font-medium   hover:underline gap-1   hover:underline-offset-2 flex  space-x-4 '>{Sideprojet.title_2} <ArrowUpRight className="w-5" /></Link>  {/* Peut-être ajouter une police différente */}
-                                            <p className='text-gray-600 '>{Sideprojet.description_2}  </p>  {/* Couleur de texte plus claire */}
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                    ))}
+                <div className='text-gray-500'>{projet.date}</div>
+              </div>
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full' src={projet.image_2} alt={projet.work_2} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <p className='font-medium'>{projet.work_2}</p>
+                    <Link target="_blank" href="https://www.prestijsarl.com/" className='text-gray-600 hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{projet.ets_2} <ArrowUpRight className="w-5" /></Link>
+                  </div>
                 </div>
+                <div className='text-gray-500'>{projet.date_2}</div>
+              </div>
             </div>
-        </>
+          </div>
+        ))}
+      </div>
 
-    )
+      {/* Section "Projects" */}
+      <div className='mt-16 md:mt-20'>
+        {sideProject.map((Sideprojet) => (
+          <div key={Sideprojet.id} className='p-5 md:flex md:space-x-20 mt-11'>
+            <div className='flex w-1/12'>{Sideprojet.status}</div>
+            <div className='mt-2 md:mt-0 w-full'>
+              <h1 className='font-semibold'>{Sideprojet.experience}</h1>
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full' src={Sideprojet.image} alt={Sideprojet.title} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <Link href={Sideprojet.link} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title} <ArrowUpRight className="w-5" /></Link>
+                    <p className='text-gray-600'>{Sideprojet.description}</p>
+                  </div>
+                </div>
+              </div>
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full' src={Sideprojet.image_2} alt={Sideprojet.title_2} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <Link href={Sideprojet.link_2} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title_2} <ArrowUpRight className="w-5" /></Link>
+                    <p className='text-gray-600'>{Sideprojet.description_2}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )
 }
