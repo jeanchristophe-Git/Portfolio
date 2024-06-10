@@ -4,38 +4,42 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // image
-import profile from '../public/placehod.svg';
+
+import Homee from '../public/homee.png'
+import YellowCard from '../public/YellowCard.png'
+import Bolle from '../public/Bollestore.png'
 
 export default function ProjectSection() {
 
-    const projName = {
-        name: "Tronis"
-    };
+    
 
     const project = [
         {
             id: 1,
             years: "2024-2003",
-            name: "Tronis",
-            description: "Led design & development of Bitrefills design system as well as focusing on core flows like discovery, search and navigation",
-            suite: `lire plus sur ${projName.name}`,
-            image: profile 
+            name: "HOMEE",
+            description: "c'est une application web inteligente permetent de vendre acheter louer en ligne ",
+            suite: 'En production ...',
+            image: Homee ,
+            link:""
         },
         {
             id: 2,
             years: "2024-2003",
-            name: "Tronis",
-            description: "Led design & development of Bitrefills design system as well as focusing on core flows like discovery, search and navigation",
-            suite: `lire plus sur ${projName.name}`,
-            image: profile 
+            name: "BolleStore",
+            description: "Rrfonte fictive de l'application web yellow card en ajouteat plus de modernite  ",
+            suite: 'Voir le projet',
+            image: Bolle,
+            link: "www.bollestoreplus.com"
         },
         {
             id: 3,
             years: "2024-2003",
             name: "Tronis",
             description: "Led design & development of Bitrefills design system as well as focusing on core flows like discovery, search and navigation",
-            suite: `lire plus sur ${projName.name}`,
-            image: profile 
+            suite: 'Voir le projet ',
+            image: YellowCard ,
+            link:""
         },
     ];
 
@@ -49,14 +53,15 @@ export default function ProjectSection() {
                         <div className=' ' >
                             <h1 className=' font-semibold ' >{projet.name}</h1>
                             <p className=' text-gray-500 font-medium ' >{projet.description}</p>
-                            <Link href="/" className=' underline hover:underline-offset-4   ease-in-out  font-medium ' >{projet.suite}</Link>
+                            <Link href={projet.link} className=' underline hover:underline-offset-4   ease-in-out  font-medium ' >{projet.suite}</Link>
                             <div className='  w-full ' >
                             <Image className='w-full mt-5 rounded-2xl '
                                 src={projet.image}
                                 alt={projet.name}
-                                width={600}
-                                height={400}
+                                width={630}
+                                height={500}
                             />
+                           
                             </div>
                         </div>
                     </div>

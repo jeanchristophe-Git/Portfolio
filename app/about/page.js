@@ -6,6 +6,10 @@ import logo from '../../public/profile.png'
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/button";
+import Homee from '../../public/homee.png'
+import YellowCard from '../../public/YellowCard.png'
+import Bolle from '../../public/Bollestore.png'
+import ImageSection from "@/components/image";
 
 export default function PageAbout() {
   // Tableau contenant les informations "À propos de moi"
@@ -17,7 +21,7 @@ export default function PageAbout() {
       location: "Abidjan",
       school: "ESMA",
       description: [
-        " Actuellement étudiant en informatique à Ecole de spécialité Multimedia d'Abidjan, j'ai eu l'opportunité de travailler sur de nombreux projets, notamment en front-end, UI/UX.",
+        
         "Je suis particulièrement curieux et j'apprends très vite. Formé en back-end de manière autodidacte, ce qui me permet de me définir comme un développeur full-stack junior. J'adore commencer des projets de A à Z, en créant les visuels pour les applications avec des outils comme Figma et Photoshop. J'aime transformer des idées en produits finis, en m'assurant que chaque détail est pris en compte pour offrir une expérience utilisateur optimale.",
         "J'aime travailler sur mes idées et je suis toujours ouvert à de nouvelles opportunités et collaborations pour grandir et apprendre."
       ]
@@ -53,18 +57,27 @@ export default function PageAbout() {
       experience: "J'aime travailler sur mes idees 🌟",
 
       //projet 1
-      title: "E-commerce",
+      title: "Bollestore",
       description: "Création d'un site e-commerce avec Next.js et Stripe",
-      image: logo,
-      link: "https://github.com/lucidev/e-commerce",
+      image: Bolle,
+      link: "https://bollestoreplus.com",
 
       //projet 2
       title_2: "Jean christophe Bogbé",
       description_2: "Le site web que vous consultez !",
       image_2: logo,
-      link_2: "https://github.com/lucidev/e-commerce"
+      link_2: "https://github.com/lucidev/e-commerce",
+      
+      //projet 3
+      title_3: "Yellow Card",
+      description_3: "Refonte fictive du site la landing , apportant pluss de modernisme",
+      image_3: YellowCard,
+      link_3: "https://github.com/lucidev/e-commerce"
     }
   ];
+
+
+
 
   return (
     <>
@@ -80,8 +93,9 @@ export default function PageAbout() {
                 <h1 className='font-semibold'>Qui suis-je ?</h1>
               </div>
               <div className="mt-4 leading-7">
-                {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button>.Actuellement étudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link>. Je suis un développeur web passionné basé à Abidjan.
+                {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button> . Etudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link> .
               </div>
+              <ImageSection/>
               {person.description.map((desc, index) => (
                 <p key={index} className="mt-4 leading-7">{desc}</p>
               ))}
@@ -128,21 +142,26 @@ export default function PageAbout() {
       </div>
 
       {/* Section "Projects" */}
-      <div className='mt-16 md:mt-20'>
+      <div className='mt-16 md:mt-20 mb-32 '>
         {sideProject.map((Sideprojet) => (
           <div key={Sideprojet.id} className='p-5 md:flex md:space-x-20 mt-11'>
             <div className='flex w-1/12'>{Sideprojet.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <h1 className='font-semibold'>{Sideprojet.experience}</h1>
+
+              {/* pojet 1 */}
               <div className='flex items-center justify-between mt-4'>
                 <div className='flex items-center'>
-                  <Image className='w-16 h-16 rounded-full' src={Sideprojet.image} alt={Sideprojet.title} width={64} height={64} />
+                  <Image className='w-16 h-16 rounded-full  object-cover ' src={Sideprojet.image} alt={Sideprojet.title} width={64} height={64} />
                   <div className='flex flex-col ml-4'>
                     <Link href={Sideprojet.link} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title} <ArrowUpRight className="w-5" /></Link>
                     <p className='text-gray-600'>{Sideprojet.description}</p>
                   </div>
                 </div>
               </div>
+
+                {/* pojet 2 */}
+
               <div className='flex items-center justify-between mt-4'>
                 <div className='flex items-center'>
                   <Image className='w-16 h-16 rounded-full' src={Sideprojet.image_2} alt={Sideprojet.title_2} width={64} height={64} />
@@ -152,9 +171,26 @@ export default function PageAbout() {
                   </div>
                 </div>
               </div>
+
+
+               {/* pojet 3 */}
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full object-cover ' src={Sideprojet.image_3} alt={Sideprojet.title_3} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <Link href={Sideprojet.link_3} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title_3} <ArrowUpRight className="w-5" /></Link>
+                    <p className='text-gray-600'>{Sideprojet.description_3}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
+
+        {/* mex technos  */}
+
+        
+       
       </div>
     </>
   )
