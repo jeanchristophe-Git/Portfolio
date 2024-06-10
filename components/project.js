@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import Homee from '../public/homee.png'
 import Bolle from '../public/Bollestore.png'
+import yCard from '../public/ywllow.png'
 
 export default function ProjectSection() {
 
@@ -17,7 +18,7 @@ export default function ProjectSection() {
             id: 1,
             years: "2024-2003",
             name: "HOMEE",
-            description: "c'est une application web inteligente permetent de vendre acheter louer en ligne ",
+            description: "Une application web intelligente qui facilite la vente, l'achat et la location en ligne. ",
             suite: 'En production ...',
             image: Homee ,
             link:""
@@ -26,7 +27,7 @@ export default function ProjectSection() {
             id: 2,
             years: "2024-2003",
             name: "BolleStore",
-            description: "Rrfonte fictive de l'application web yellow card en ajouteat plus de modernite  ",
+            description: "Appli web e-commerce  ",
             suite: 'Voir le projet',
             image: Bolle,
             link: "www.bollestoreplus.com"
@@ -35,9 +36,9 @@ export default function ProjectSection() {
             id: 3,
             years: "2024-2003",
             name: "Yellow Card",
-            description: "Led design & development of Bitrefills design system as well as focusing on core flows like discovery, search and navigation",
+            description: "Refonte fictive de l'application web Yellow Card, en ajoutant une touche de modernité.",
             suite: 'Voir le projet ',
-            image: Homee ,
+            image: yCard ,
             link:""
         },
     ];

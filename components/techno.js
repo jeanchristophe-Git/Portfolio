@@ -71,10 +71,10 @@ export default function TechnoSection() {
   };
 
   return (
-    <div className=" mt-28 p-5 md:p-0 ">
+    <div className=" mt-28 p-5 md:p-0  ">
       <h1 className="text-3xl font-semibold ">Comment puis-je vous aider ?</h1>
       <p className="text-gray-500 font-medium mt-2 ">
-      Je conçois des expériences sur mesure pour vous, vos clients et vos projets les plus ambitieux, en partant de zéro.
+      Je suis spécialisé dans la conception d'expériences personnalisées pour vous, vos clients et vos projets les plus ambitieux, en commençant de zéro.
       </p>
       <div className="mt-8 grid  grid-cols-2  md:grid-cols-4   gap-1">
         {tecno.map((tecno) => {

@@ -54,11 +54,11 @@ export default function PageAbout() {
     {
       id: 1,
       status: "Projets ",
-      experience: "J'aime travailler sur mes idees 🌟",
+      experience: "Ce que j'ai eu a réaliser 🌟",
 
       //projet 1
       title: "Bollestore",
-      description: "Création d'un site e-commerce avec Next.js et Stripe",
+      description: "J'ai travaillé sur le front-end de l'application ",
       image: Bolle,
       link: "https://bollestoreplus.com",
 
@@ -66,13 +66,19 @@ export default function PageAbout() {
       title_2: "Jean christophe Bogbé",
       description_2: "Le site web que vous consultez !",
       image_2: logo,
-      link_2: "https://github.com/lucidev/e-commerce",
+      link_2: "https://jeanchristophe-portfolio.vercel.app/",
       
       //projet 3
       title_3: "Homee",
-      description_3: "c'est une application web inteligente permetent de vendre acheter louer en ligne",
+      description_3: "Une application web intelligente permettant la vente, l'achat et la location en ligne.",
       image_3: Homee,
-      link_3: "https://github.com/lucidev/e-commerce"
+      link_3: "#",
+
+      //projet 4
+      title_4: "Homee",
+      description_4: "c'est une application web inteligente permetent de vendre acheter louer en ligne",
+      image_4: Homee,
+      link_4: "#"
     }
   ];
 
@@ -124,17 +130,17 @@ export default function PageAbout() {
                     <Link href="https://www.malt.fr/" className='text-gray-600 hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{projet.ets} <ArrowUpRight className="w-5" /></Link>
                   </div>
                 </div>
-                <div className='text-gray-500'>{projet.date}</div>
+                <div className='text-gray-500 text-sm  md:text-[15px]   '>{projet.date}</div>
               </div>
               <div className='flex items-center justify-between mt-4'>
                 <div className='flex items-center'>
                   <Image className='w-16 h-16 rounded-full' src={projet.image_2} alt={projet.work_2} width={64} height={64} />
                   <div className='flex flex-col ml-4'>
-                    <p className='font-medium'>{projet.work_2}</p>
-                    <Link target="_blank" href="https://www.prestijsarl.com/" className='text-gray-600 hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{projet.ets_2} <ArrowUpRight className="w-5" /></Link>
+                    <p className='font-medium '>{projet.work_2}</p>
+                    <Link target="_blank" href="https://www.prestijsarl.com/" className='text-gray-600 hover:underline gap-1 hover:underline-offset-2 flex space-x-4  '>{projet.ets_2} <ArrowUpRight className="w-5" /></Link>
                   </div>
                 </div>
-                <div className='text-gray-500'>{projet.date_2}</div>
+                <div className='text-gray-500 text-sm  md:text-[15px]'>{projet.date_2}</div>
               </div>
             </div>
           </div>
@@ -155,7 +161,7 @@ export default function PageAbout() {
                   <Image className='w-16 h-16 rounded-full  object-cover ' src={Sideprojet.image} alt={Sideprojet.title} width={64} height={64} />
                   <div className='flex flex-col ml-4'>
                     <Link href={Sideprojet.link} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title} <ArrowUpRight className="w-5" /></Link>
-                    <p className='text-gray-600'>{Sideprojet.description}</p>
+                    <p className='text-gray-600 text-sm  md:text-[15px]'>{Sideprojet.description}</p>
                   </div>
                 </div>
               </div>
@@ -167,7 +173,7 @@ export default function PageAbout() {
                   <Image className='w-16 h-16 rounded-full' src={Sideprojet.image_2} alt={Sideprojet.title_2} width={64} height={64} />
                   <div className='flex flex-col ml-4'>
                     <Link href={Sideprojet.link_2} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title_2} <ArrowUpRight className="w-5" /></Link>
-                    <p className='text-gray-600'>{Sideprojet.description_2}</p>
+                    <p className='text-gray-600 text-sm  md:text-[15px]'>{Sideprojet.description_2}</p>
                   </div>
                 </div>
               </div>
@@ -179,7 +185,7 @@ export default function PageAbout() {
                   <Image className='w-16 h-16 rounded-full object-cover ' src={Sideprojet.image_3} alt={Sideprojet.title_3} width={64} height={64} />
                   <div className='flex flex-col ml-4'>
                     <Link href={Sideprojet.link_3} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title_3} <ArrowUpRight className="w-5" /></Link>
-                    <p className='text-gray-600'>{Sideprojet.description_3}</p>
+                    <p className='text-gray-600 text-sm  md:text-[15px]'>{Sideprojet.description_3}</p>
                   </div>
                 </div>
               </div>

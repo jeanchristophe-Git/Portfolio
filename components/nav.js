@@ -20,10 +20,10 @@ export default function NavSection() {
           </div>
           <ul className="flex space-x-8">
             <li>
-              <Link href="/" className="text-gray-500 hover:text-slate-900  dark:hover:text-gray-50 ">Home</Link>
+              <Link href="/" className="text-gray-500 hover:text-slate-900  dark:hover:text-gray-50 ">Acceuil</Link>
             </li>
             <li>
-              <Link href="/about" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">About</Link>
+              <Link href="/about" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">A propos</Link>
             </li>
             <li>
               <Link href="/blog" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">Blog</Link>
