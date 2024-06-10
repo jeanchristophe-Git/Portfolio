@@ -6,7 +6,6 @@ import Link from 'next/link';
 // image
 
 import Homee from '../public/homee.png'
-import YellowCard from '../public/YellowCard.png'
 import Bolle from '../public/Bollestore.png'
 
 export default function ProjectSection() {
@@ -35,10 +34,10 @@ export default function ProjectSection() {
         {
             id: 3,
             years: "2024-2003",
-            name: "Tronis",
+            name: "Yellow Card",
             description: "Led design & development of Bitrefills design system as well as focusing on core flows like discovery, search and navigation",
             suite: 'Voir le projet ',
-            image: YellowCard ,
+            image: Homee ,
             link:""
         },
     ];
@@ -49,10 +48,10 @@ export default function ProjectSection() {
             <div>
                 {project.map((projet) => (
                     <div key={projet.id} className=' p-5  md:flex  md:space-x-20 mt-11  '>
-                        <div className=' flex  w-4/12  '  >{projet.years}</div>
+                        <div className=' flex  w-4/12 mb-4 md:mb-0  '  >{projet.years}</div>
                         <div className=' ' >
-                            <h1 className=' font-semibold ' >{projet.name}</h1>
-                            <p className=' text-gray-500 font-medium ' >{projet.description}</p>
+                            <h1 className=' font-semi-bold mb-4 md:mb-0 ' >{projet.name}</h1>
+                            <p className=' text-gray-500 font-medium mb-4 md:mb-0 ' >{projet.description}</p>
                             <Link href={projet.link} className=' underline hover:underline-offset-4   ease-in-out  font-medium ' >{projet.suite}</Link>
                             <div className='  w-full ' >
                             <Image className='w-full mt-5 rounded-2xl '

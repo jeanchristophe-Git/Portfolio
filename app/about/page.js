@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/button";
 import Homee from '../../public/homee.png'
-import YellowCard from '../../public/YellowCard.png'
+
 import Bolle from '../../public/Bollestore.png'
 import ImageSection from "@/components/image";
 
@@ -69,9 +69,9 @@ export default function PageAbout() {
       link_2: "https://github.com/lucidev/e-commerce",
       
       //projet 3
-      title_3: "Yellow Card",
-      description_3: "Refonte fictive du site la landing , apportant pluss de modernisme",
-      image_3: YellowCard,
+      title_3: "Homee",
+      description_3: "c'est une application web inteligente permetent de vendre acheter louer en ligne",
+      image_3: Homee,
       link_3: "https://github.com/lucidev/e-commerce"
     }
   ];
@@ -90,7 +90,7 @@ export default function PageAbout() {
             <div className='flex w-1/12'>{person.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <div className="flex items-center justify-between">
-                <h1 className='font-semibold'>Qui suis-je ?</h1>
+                <h1 className='font-semi-bold'>Qui suis-je ?</h1>
               </div>
               <div className="mt-4 leading-7">
                 {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button> . Etudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link> .
@@ -111,7 +111,7 @@ export default function PageAbout() {
             <div className='flex w-1/12'>{projet.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <div className="flex items-center justify-between">
-                <h1 className='font-semibold'>{projet.experience}</h1>
+                <h1 className='font-semi-bold'>{projet.experience}</h1>
                 <Link href="https://read.cv/jeanchristophe" target="_blank">
                   <Button variant="outline" size="xs">Lire mon cv</Button>
                 </Link>
@@ -147,7 +147,7 @@ export default function PageAbout() {
           <div key={Sideprojet.id} className='p-5 md:flex md:space-x-20 mt-11'>
             <div className='flex w-1/12'>{Sideprojet.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
-              <h1 className='font-semibold'>{Sideprojet.experience}</h1>
+              <h1 className='font-semi-bold'>{Sideprojet.experience}</h1>
 
               {/* pojet 1 */}
               <div className='flex items-center justify-between mt-4'>
