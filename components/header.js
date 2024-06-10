@@ -8,7 +8,7 @@ import { BadgeCheck } from "lucide-react";
 
 export default function HeaderSection() {
   return (
-    <div>
+    <div className=" mx-2 "  >
       <NavSection/>
       <div className=" ml-5 md:ml-0 mt-32 w-full   " >
         <div className="flex space-x-2 items-center " >

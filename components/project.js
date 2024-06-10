@@ -43,7 +43,7 @@ export default function ProjectSection() {
     ];
 
     return (
-        <div className=' mt-16  md:mt-20'>
+        <div className=' mt-16   md:mt-20'>
             <h1 className=' ml-5 md:ml-0 font-medium md:mt-4 '>Projets sélectionnés</h1>
             <div>
                 {project.map((projet) => (

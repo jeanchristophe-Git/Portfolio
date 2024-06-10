@@ -6,7 +6,7 @@ import DarkModeToggle from "./dark-mode-toogle";
 export default function NavSection() {
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0  backdrop-blur-sm  z-40">
+      <nav className="fixed top-0 left-0 right-0  backdrop-blur-sm mx-3  z-40">
         <div className="container mx-auto  max-w-2xl flex justify-between items-center p-3 md:p-1  ">
           <div>
             <Image 
