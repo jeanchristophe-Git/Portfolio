@@ -15,7 +15,7 @@ export default function HeaderSection() {
         <h1 className="  font-medium text-slate-800 dark:text-slate-200 ">Jean Christophe Désiré Bogbé </h1>
         <BadgeCheck  className=" w-5 text-blue-600  "  />
         </div>
-        <p className="text-gray-500" >Je conçois & construis des interfaces </p>
+        <p className="text-gray-500" >Je conçois & construis des interfaces  </p>
       </div>
       <ProjectSection />
       <TechnoSection/>
