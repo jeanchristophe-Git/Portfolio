@@ -43,7 +43,7 @@ export default function PageAbout() {
 
       //xp2
       image_2: logo,
-      work_2: "Developpeur Frontend",
+      work_2: "Dev Frontend",
       ets_2: "Prestij Sarl",
       date_2: "2022-2023"
     }
@@ -92,16 +92,22 @@ export default function PageAbout() {
       {/* Section "À propos de moi" */}
       <div className="mt-16 md:mt-20">
         {aboutMe.map((person) => (
-          <div key={person.id} className='p-5 md:flex md:space-x-20 mt-11'>
-            <div className='flex w-1/12'>{person.status}</div>
+          <div key={person.id} className='p-5 md:flex md:space-x-20 mt-11  '>
+            <div className= ' mb-5 font-semibold  flex w-1/12'>{person.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <div className="flex items-center justify-between">
-                <h1 className='font-semi-bold'>Qui suis-je ?</h1>
+                <h1 className='font-semibold'>Qui suis-je ?</h1>
               </div>
-              <div className="mt-4 leading-7">
+              <div className="mt-4 leading-9">
                 {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button> . Etudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link> .
               </div>
+
+              {/* images grid */}
+
               <ImageSection/>
+
+               {/* images grid */}
+
               {person.description.map((desc, index) => (
                 <p key={index} className="mt-4 leading-7">{desc}</p>
               ))}
@@ -114,7 +120,7 @@ export default function PageAbout() {
       <div className='mt-16 md:mt-20'>
         {Work.map((projet) => (
           <div key={projet.id} className='p-5 md:flex md:space-x-20 mt-11'>
-            <div className='flex w-1/12'>{projet.status}</div>
+            <div className='flex w-1/12 font-semibold '>{projet.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <div className="flex items-center justify-between">
                 <h1 className='font-semi-bold'>{projet.experience}</h1>
@@ -151,7 +157,7 @@ export default function PageAbout() {
       <div className='mt-16 md:mt-20 mb-32 '>
         {sideProject.map((Sideprojet) => (
           <div key={Sideprojet.id} className='p-5 md:flex md:space-x-20 mt-11'>
-            <div className='flex w-1/12'>{Sideprojet.status}</div>
+            <div className='flex w-1/12 font-semibold '>{Sideprojet.status}</div>
             <div className='mt-2 md:mt-0 w-full'>
               <h1 className='font-semi-bold'>{Sideprojet.experience}</h1>
 

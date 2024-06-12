@@ -48,7 +48,7 @@ export default function TechnoSection() {
     },
     {
       id: 6,
-      name: "Tailwind CSS",
+      name: "Tailwind ",
       icon:  <SiTailwindcss />
 ,
     },

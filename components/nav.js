@@ -18,15 +18,15 @@ export default function NavSection() {
               placeholder="blur" 
             />
           </div>
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-4 md:space-x-8">
             <li>
-              <Link href="/" className="text-gray-500 hover:text-slate-900  dark:hover:text-gray-50 ">Acceuil</Link>
+              <Link href="/" className="text-gray-700 hover:text-slate-500  dark:text-white  dark:hover:text-slate-500 ">Acceuil</Link>
             </li>
             <li>
-              <Link href="/about" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">A propos</Link>
+              <Link href="/about" className="text-gray-700 hover:text-slate-500 dark:text-slate-100  dark:hover:text-slate-500  ">A propos</Link>
             </li>
             <li>
-              <Link href="/blog" className="text-gray-500 hover:text-slate-900 dark:hover:text-gray-50 ">Blog</Link>
+              <Link href="/blog" className="text-gray-700 hover:text-slate-500 dark:text-slate-100  dark:hover:text-slate-500  ">Blog</Link>
             </li>
           </ul>
            <DarkModeToggle/>
