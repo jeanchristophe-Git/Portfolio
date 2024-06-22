@@ -49,7 +49,7 @@ export default function ProjectSection() {
             description: "j'ai entrepris le défi passionnant de cloner l'interface utilisateur et certaines fonctionnalités clés de la célèbre plateforme Airbnb.",
             suite: 'Voir le projet ',
             image: Bnb ,
-            link:""
+            link:"https://jean-christophe-airbnb-clone.vercel.app/"
         },
     ];
 

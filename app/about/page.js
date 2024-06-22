@@ -9,6 +9,7 @@ import Button from "@/components/button";
 import Homee from '../../public/homee.png'
 
 import Bolle from '../../public/Bollestore.png'
+import Bnb from '../../public/refonteAirbnb.png'
 import ImageSection from "@/components/image";
 
 export default function PageAbout() {
@@ -75,10 +76,10 @@ export default function PageAbout() {
       link_3: "#",
 
       //projet 4
-      title_4: "Homee",
-      description_4: "c'est une application web inteligente permetent de vendre acheter louer en ligne",
-      image_4: Homee,
-      link_4: "#"
+      title_4: "Aibnb clone ",
+      description_4: "j'ai entrepris le défi passionnant de cloner l'interface utilisateur et certaines fonctionnalités clés de la célèbre plateforme Airbnb",
+      image_4: Bnb,
+      link_4: "https://jean-christophe-airbnb-clone.vercel.app/"
     }
   ];
 
