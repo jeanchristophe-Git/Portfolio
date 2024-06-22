@@ -19,7 +19,7 @@ export default function PageAbout() {
       status: "Moi",
       name: "Jean-Christophe",
       location: "Abidjan",
-      school: "ESMA",
+      
       description: [
         
         "Je suis particulièrement curieux et j'apprends très vite. Formé en back-end de manière autodidacte, ce qui me permet de me définir comme un développeur full-stack junior. J'adore commencer des projets de A à Z, en créant les visuels pour les applications avec des outils comme Figma et Photoshop. J'aime transformer des idées en produits finis, en m'assurant que chaque détail est pris en compte pour offrir une expérience utilisateur optimale.",
@@ -99,7 +99,7 @@ export default function PageAbout() {
                 <h1 className='font-semibold'>Qui suis-je ?</h1>
               </div>
               <div className="mt-4 leading-9">
-                {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button> . Etudiant en informatique à  <Link href="/"><Button variant="outline" size="xs">{person.school}</Button></Link> .
+                {person.name} et je suis un développeur web passionné basé à <Button variant="outline" size="xs">{person.location}</Button>.
               </div>
 
               {/* images grid */}
