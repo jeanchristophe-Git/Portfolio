@@ -196,6 +196,17 @@ export default function PageAbout() {
                   </div>
                 </div>
               </div>
+
+               {/* pojet 4 */}
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center'>
+                  <Image className='w-16 h-16 rounded-full object-cover ' src={Sideprojet.image_4} alt={Sideprojet.title_4} width={64} height={64} />
+                  <div className='flex flex-col ml-4'>
+                    <Link href={Sideprojet.link_4} className='font-medium hover:underline gap-1 hover:underline-offset-2 flex space-x-4'>{Sideprojet.title_4} <ArrowUpRight className="w-5" /></Link>
+                    <p className='text-gray-600 text-sm  md:text-[15px]'>{Sideprojet.description_4}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
