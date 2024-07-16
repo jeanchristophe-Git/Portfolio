@@ -79,7 +79,7 @@ export default function PageAbout() {
       title_4: "Aibnb clone ",
       description_4: "j'ai entrepris le défi passionnant de cloner l'interface utilisateur de la plateforme Airbnb",
       image_4: Bnb,
-      link_4: "https://jean-christophe-airbnb-clone.vercel.app/"
+      link_4: "https://jean-christophe-b-n-b.vercel.app/"
     }
   ];
 
